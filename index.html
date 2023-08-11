@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors?</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/normlaize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@300;400;600;700&family=Raleway:ital,wght@0,100;0,400;0,600;1,300;1,500;1,600&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <section class="button">
+            <button class="btn">
+                Lets Play
+            </button>
+        </section>
+        <header>
+            <h1>Rock, Paper, Scissors?</h1>
+        </header>
+        <div class="winner"></div>
+        <section class="button2">
+            <button class="btn-restart">
+                play again ?
+            </button>
+        </section>
+        <section class="players">
+            <div class="player">
+                <h1>player</h1>
+                <div class="score">
+                    <img src="images/man-avatar.png">
+                    <h4>score: <span class="count">0</span></h4>
+                </div>
+                <div class="coises">
+                    <div class="coice" onclick="playerSelection(this)" data-name="rock">
+                        <h3>rock</h3>
+                        <img src="images/—Pngtree—off-white rock clip art_5805268.png" style="width: 50px; background: none;">
+                    </div>
+                    <div class="coice" onclick="playerSelection(this)" data-name="paper">
+                        <h3>paper</h3>         
+                        <lord-icon src="https://cdn.lordicon.com/pqxdilfs.json"trigger="hover"colors="outline:#131432,primary:#606874,secondary:#08a88a,tertiary:#ebe6ef"style="width:50px;height:50px"></lord-icon>
+                    </div>
+                    <div class="coice" onclick="playerSelection(this)" data-name="scissors">
+                        <h3>scissors</h3>
+                        <i class="fa-solid fa-scissors fa-2xl" style="position: absolute; top: 60%; left: 50%;transform: translate(-50%,-50%);"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="computer">
+                <h1>computer</h1>
+                <div class="score">
+                    <img src="images/robot.png">
+                    <h4>score: <span class="count">0</span></h4>
+                </div>
+                <div class="coises" >
+                    <div class="coice" data-robot="rock">
+                        <h3>rock</h3>
+                        <img src="images/—Pngtree—off-white rock clip art_5805268.png" style="width: 50px; background: none;">
+                    </div>
+                    <div class="coice" data-robot="paper">
+                        <h3>paper</h3>         
+                        <lord-icon src="https://cdn.lordicon.com/pqxdilfs.json"trigger="hover"colors="outline:#131432,primary:#606874,secondary:#08a88a,tertiary:#ebe6ef"style="width:50px;height:50px"></lord-icon>
+                    </div>
+                    <div class="coice" data-robot="scissors">
+                        <h3>scissors</h3>
+                        <i class="fa-solid fa-scissors fa-2xl" style="position: absolute; top: 60%; left: 50%;transform: translate(-50%,-50%);"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
