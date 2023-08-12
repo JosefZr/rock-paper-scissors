@@ -5,6 +5,7 @@ let header = document.querySelector("header h1");
 document.addEventListener('click' ,function(e){
     if(e.target.classList.contains('btn')){
         btn.style.opcity="0";
+        click.play();
         setTimeout(function(){
             btn.style.display="none"
             game.style.display="flex";
@@ -15,7 +16,14 @@ document.addEventListener('click' ,function(e){
         },10)
     }   
 });
-
+const click = document.querySelector(`audio[data-key="btn-click"]`);
+const win = document.querySelector(`audio[data-key="win"]`);
+const loose = document.querySelector(`audio[data-key="loose"]`);
+function resetsound(){
+    click.currentTime=0;
+    win.currentTime=0;
+    loose.currentTime=0;
+}
 
 
 let userScore = 0;
@@ -55,7 +63,7 @@ function playerSelection(e) {
     }
     e.style.background = "red";
     previousPlayerChoice = e; // Update the previousPlayerChoice to the current choice
-
+    click.play();
     let userChoice = e.getAttribute("data-name");
     return userChoice;
 }
@@ -94,7 +102,7 @@ function playRound(playerSelection, computerSelection) {
         console.log('Player wins the game');
         const playerFinalScore = userScore;
         const computerFinalScore = computerScore;
-
+        win.play();
         setTimeout(function() {
             game.style.display = "none";
             again.style.display = "block";
@@ -114,7 +122,7 @@ function playRound(playerSelection, computerSelection) {
         console.log("Computer wins the game");
         const playerFinalScore = userScore;
         const computerFinalScore = computerScore;
-
+        loose.play();
         setTimeout(function() {
             again.style.display = "block";
             game.style.display = "none";
@@ -140,6 +148,7 @@ function clearData(){
 }
 document.addEventListener('click', function (e) {
     if (e.target.classList.contains('btn-restart')) {
+        click.play();
         setTimeout(function () {
             again.style.display = "none";
             game.style.display = "flex";
